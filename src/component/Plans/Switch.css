@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Ubuntu-b;
+    src: url(/src/assets/fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family:Ubuntu-m;
+    src: url(/src/assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-r;
+    src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
+}
+
+
+.switch-d {
+    width:70% ;
+    margin-top: 5%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(237, 237, 249);
+    display: flex;
+    justify-content: center;
+}
+
+.switch-class {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 10% ;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(8, 4, 79);
+    border-radius: 20px ;
+    height: 20px;
+    width: 48px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    top: 2px;
+    left: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    transform: translate(26px);
+}
+
+.monthly {
+    color: rgb(175, 172, 172);
+    font-family:Ubuntu-r;
+}
+
+.yearly {
+    color: rgb(8, 4, 79);
+    font-family:Ubuntu-r;
+}
+
+.monthly.toggled {
+    color:rgb(8, 4, 79);
+    font-family:Ubuntu-r;
+}
+
+.yearly.toggled {
+    color: rgb(175, 172, 172);
+    font-family:Ubuntu-r;
+}

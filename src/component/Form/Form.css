@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Ubuntu-b;
+    src: url(/src/assets/fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family:Ubuntu-m;
+    src: url(/src/assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-r;
+    src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
+}
+
+
+.form {
+    min-width: 53%;
+    margin-right: 10%;
+    float: right;
+    flex-grow: 1;
+
+}
+
+
+.header h1 {
+    font-family: Ubuntu-b;
+    width: 100%;
+    text-align: left;
+    color: #0e2f5a;
+}
+

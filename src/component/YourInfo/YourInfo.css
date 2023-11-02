@@ -1,0 +1,56 @@
+@font-face {
+    font-family: Ubuntu-b;
+    src: url(/src/assets/fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family:Ubuntu-m;
+    src: url(/src/assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-r;
+    src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
+}
+
+
+.your-info p {
+    color: grey;
+    text-align: left;
+    font-family: Ubuntu-r;
+}
+
+.your-info form div {
+   text-align: left;
+}
+
+.your-info form div h5 {
+    color:#0e2f5a;
+    font-size: smaller;
+    margin-bottom: 10px;
+}
+
+.text-space {
+    width: 70%;
+    height: 45px;
+    border-radius: 10px;
+    border:solid 2px rgb(215, 215, 215);
+    margin-bottom: 40px;
+}
+
+.text-space input {
+    border: none;
+    width: 90%;
+    height: 90%;
+    margin-left: 20px;
+    outline: none;
+  }
+
+  .text-space input[type='text'] {
+    font-family: Ubuntu-r;
+  }
+
+  .text-space input::placeholder {
+    color: rgb(160, 160, 160);
+    font-family: Ubuntu-r;
+  }

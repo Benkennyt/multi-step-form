@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Ubuntu-b;
+    src: url(/src/assets/fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family:Ubuntu-m;
+    src: url(/src/assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-r;
+    src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
+}
+
+
+.select-plan p {
+    color: grey;
+    text-align: left;
+    font-family: Ubuntu-r;
+}
+
+.plan {
+    text-align: left;
+}
+
+.plan button {
+    width:21.5% ;
+    margin-right: 3%;
+    text-align: left;
+    padding-left: 15px;
+    border: solid 2px #dde7f4;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.plan button:hover {
+    border-color: #976da2;
+    background-color: #f9f4f8;
+}
+
+.plan button:focus{
+    border-color: #976da2;
+    background-color: #f9f4f8;
+}
+
+.plan button img {
+    width: 35px;
+    margin-top: 15px;
+    
+}
+
+.plan button h5 {
+    color: #0e2f5a;
+    margin-top: 50px;
+    font-family: Ubuntu-m;
+    margin-bottom: 0;
+}
+
+.plan button .p1 {
+    color: rgb(159, 158, 158);
+    font-family: Ubuntu-m;
+    margin-top: 7px;
+    font-size: smaller;
+   
+}
+
+.p2 {
+    color: #0e2f5a !important;
+    font-family: Ubuntu-r;
+    font-weight: bolder;
+    font-size: smaller;
+    margin-top: 7px;
+}
+
