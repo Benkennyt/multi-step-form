@@ -13,23 +13,102 @@
     src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
 }
 
+.addon {
+    width: 69.5%;
+}
 
 .addon .addon-p {
-    color: grey;
+    color: rgb(161, 158, 158);
     text-align: left;
     font-family: Ubuntu-r;
 }
 
 
-
-
-
-.addon {
-    width: 69.5%;
+.option-btn {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px #dde7f4;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 3%;
+    cursor: pointer;
 }
 
-.option-box {
-    width: 100%;
-    border: solid 3px red;
-   
+.option-btn:hover {
+    border-color:#6259FF;
+    background-color: #eeeefd
+}
+.option-btn:focus{
+    border-color: #6259FF;
+    background-color: #eeeefd
+}
+.input-div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-div input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1pt rgb(226, 223, 223) solid;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-div input[type='checkbox']:after {
+    content: url('./icon/icon-checkmark.svg');
+    display: none;
+    color: white;
+}
+
+.input-div input[type='checkbox']:checked {
+   background-color:#6259FF;
+   border-color:#6259FF;
+}
+
+.input-div input[type='checkbox']:checked:after {
+    display: block;
+}
+
+
+.details{
+    width: 75%;
+    height: 100%;
+    
+}
+
+.details h5 {
+    color: #0e2f5a;
+    font-family: Ubuntu-m;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.details p {
+    color: rgb(161, 158, 158);
+    font-family: Ubuntu-r;
+    margin-top: 7px;
+    text-align: left;
+}
+
+.price-div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-p {
+    color: #6259FF;
+    font-family: Ubuntu-r;
+    
 }

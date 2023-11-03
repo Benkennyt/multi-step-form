@@ -15,7 +15,7 @@
 
 
 .your-info p {
-    color: grey;
+    color: rgb(161, 158, 158);
     text-align: left;
     font-family: Ubuntu-r;
 }
@@ -51,6 +51,6 @@
   }
 
   .text-space input::placeholder {
-    color: rgb(160, 160, 160);
+    color: rgb(161, 158, 158);
     font-family: Ubuntu-r;
   }

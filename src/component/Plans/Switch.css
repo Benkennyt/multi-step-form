@@ -74,7 +74,7 @@ input:checked + .slider:before {
 }
 
 .monthly {
-    color: rgb(175, 172, 172);
+    color: rgb(161, 158, 158);
     font-family:Ubuntu-r;
 }
 
@@ -89,6 +89,6 @@ input:checked + .slider:before {
 }
 
 .yearly.toggled {
-    color: rgb(175, 172, 172);
+    color: rgb(161, 158, 158);
     font-family:Ubuntu-r;
 }

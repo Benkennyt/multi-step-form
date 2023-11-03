@@ -1,0 +1,111 @@
+@font-face {
+    font-family: Ubuntu-b;
+    src: url(/src/assets/fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family:Ubuntu-m;
+    src: url(/src/assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-r;
+    src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
+}
+
+
+.summary-p {
+    color: rgb(161, 158, 158);
+    text-align: left;
+    font-family: Ubuntu-r;
+}
+
+.summary-1 {
+    background-color: rgb(248, 248, 248);
+    border-radius: 10px;
+    width: 71.2%;
+}
+
+.plan-sum {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid rgb(231, 231, 231) 1px;
+}
+
+.plan-sum-1 {
+    text-align: left;
+}
+
+
+.plan-sum-1 h5 {
+    margin-bottom: 0;
+    font-family:Ubuntu-r;
+    color: #0e2f5a;
+}
+
+.plan-sum-1 a {
+    color: rgb(161, 158, 158);
+    font-family:Ubuntu-r;
+    font-size: smaller;
+}
+
+.plan-sum-tt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan-sum-tt h5{
+    margin-bottom: 0;
+    color: #0e2f5a;
+}
+
+.addons-sum {
+   text-align: left;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-bottom: 10px;
+    border-bottom: solid rgb(231, 231, 231) 1px;
+}
+
+.addons-sum-1 {
+    font-family: Ubuntu-r;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addons-sum-1 p {
+    color:rgb(161, 158, 158);
+    font-size: smaller;
+    margin-top: 0;
+}
+
+.addons-sum-1 h6 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #1f5cac;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 63%;
+}
+
+.total p {
+    color:rgb(161, 158, 158);
+    font-size: smaller;
+    margin-top: 20px;
+    
+}
+
+.total h4 {
+    color: #6259FF;
+}
+

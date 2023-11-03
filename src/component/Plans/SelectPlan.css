@@ -15,7 +15,7 @@
 
 
 .select-plan p {
-    color: grey;
+    color: rgb(161, 158, 158);
     text-align: left;
     font-family: Ubuntu-r;
 }
@@ -36,13 +36,13 @@
 }
 
 .plan button:hover {
-    border-color: #976da2;
-    background-color: #f9f4f8;
+    border-color:#6259FF;
+    background-color: #eeeefd
 }
 
 .plan button:focus{
-    border-color: #976da2;
-    background-color: #f9f4f8;
+    border-color:#6259FF;
+    background-color: #eeeefd
 }
 
 .plan button img {
@@ -59,7 +59,7 @@
 }
 
 .plan button .p1 {
-    color: rgb(159, 158, 158);
+    color: rgb(161, 158, 158);
     font-family: Ubuntu-m;
     margin-top: 7px;
     font-size: smaller;
@@ -67,7 +67,7 @@
 }
 
 .p2 {
-    color: #0e2f5a !important;
+    color: #0e2f5a;
     font-family: Ubuntu-r;
     font-weight: bolder;
     font-size: smaller;

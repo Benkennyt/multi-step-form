@@ -2,7 +2,7 @@ import { useState } from "react";
 import YourInfo from "../YourInfo/YourInfo";
 import SelectPlan from "../Plans/SelectPlan";
 import AddOns from "../AddsOns/AddOns";
-import Summary from "../Summary";
+import Summary from "../Summary/Summary";
 import './Form.css'
 
 const Form = ({page}) => {
