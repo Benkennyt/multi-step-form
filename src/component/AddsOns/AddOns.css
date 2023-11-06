@@ -13,11 +13,17 @@
     src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
 }
 
-.addon {
-    width: 69.5%;
+.addons {
+    width: 70%;
 }
 
-.addon .addon-p {
+.addons-2 {
+    
+    min-height: 434.5px;
+    flex-grow: 1;
+}
+
+.addons .addon-p {
     color: rgb(161, 158, 158);
     text-align: left;
     font-family: Ubuntu-r;
@@ -36,14 +42,27 @@
     cursor: pointer;
 }
 
-.option-btn:hover {
+.addon-selected {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px #6259FF;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+
+.option-btn:hover, .addon-selected:hover {
     border-color:#6259FF;
     background-color: #eeeefd
 }
-.option-btn:focus{
-    border-color: #6259FF;
-    background-color: #eeeefd
+
+.addon-selected:active, .option-btn:active {
+    border-color: #b3afff;
 }
+
 .input-div {
     height: 100%;
     display: flex;
@@ -112,3 +131,28 @@
     font-family: Ubuntu-r;
     
 }
+
+
+/* Footer */
+
+.addons-footer {
+    justify-content: space-between;
+    display: flex;
+    padding-bottom: 5%;
+}
+
+.addons-footer button {
+    background-color: #0c284c;
+    cursor: pointer;
+    color: white;
+    font-family: Ubuntu-r ;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+}
+
+.addons-footer button:active {
+    background: #153f76;
+    color: white;
+  }

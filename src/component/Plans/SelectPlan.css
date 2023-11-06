@@ -20,11 +20,18 @@
     font-family: Ubuntu-r;
 }
 
+.select-plan-1 {
+    width:100%;
+    min-height: 400px;
+    margin-right: 10%;
+    flex-grow: 1;
+}
+
 .plan {
     text-align: left;
 }
 
-.plan button {
+.btn {
     width:21.5% ;
     margin-right: 3%;
     text-align: left;
@@ -35,30 +42,40 @@
     cursor: pointer;
 }
 
-.plan button:hover {
+.selected {
+    width:21.5% ;
+    margin-right: 3%;
+    text-align: left;
+    padding-left: 15px;
+    border: solid 2px #6259FF;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover,.selected:hover {
     border-color:#6259FF;
     background-color: #eeeefd
 }
 
-.plan button:focus{
-    border-color:#6259FF;
-    background-color: #eeeefd
+.btn:active, .selected:active {
+    border-color: #b3afff;
 }
 
-.plan button img {
+.btn img,.selected img {
     width: 35px;
     margin-top: 15px;
     
 }
 
-.plan button h5 {
+.btn h5,.selected h5 {
     color: #0e2f5a;
     margin-top: 50px;
     font-family: Ubuntu-m;
     margin-bottom: 0;
 }
 
-.plan button .p1 {
+.btn .p1, .selected .p1 {
     color: rgb(161, 158, 158);
     font-family: Ubuntu-m;
     margin-top: 7px;
@@ -74,3 +91,43 @@
     margin-top: 7px;
 }
 
+.plan-err{
+    color: red !important;
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    width: 70%;
+}
+
+.plan-err-hidden {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+
+/* Footer */
+
+.plan-footer {
+    justify-content: space-between;
+    display: flex;
+    width:70%;
+    padding-bottom: 5%;
+}
+
+.plan-footer button {
+    background-color: #0c284c;
+    cursor: pointer;
+    color: white;
+    font-family: Ubuntu-r ;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+}
+
+
+.plan-footer button:active {
+    background: #153f76;
+    color: white;
+  }

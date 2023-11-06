@@ -18,14 +18,22 @@
     color: rgb(161, 158, 158);
     text-align: left;
     font-family: Ubuntu-r;
+    
 }
 
 .summary-1 {
     background-color: rgb(248, 248, 248);
     border-radius: 10px;
     width: 71.2%;
+    
 }
 
+.summary-2 {
+    width:100%;
+    min-height: 400px;
+    margin-right: 10%;
+    flex-grow: 1;
+}
 .plan-sum {
     display: flex;
     justify-content: space-between;
@@ -50,7 +58,26 @@
 .plan-sum-1 a {
     color: rgb(161, 158, 158);
     font-family:Ubuntu-r;
-    font-size: smaller;
+    font-size: 10px;
+}
+
+.change {
+    border: none;
+    background-color: transparent;
+    color:rgb(161, 158, 158);
+    font-family:Ubuntu-r;
+    padding: 0;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.change:hover {
+    color: blue;
+}
+
+.change:active{
+    color: rgb(69, 69, 255);
 }
 
 .plan-sum-tt {
@@ -70,6 +97,12 @@
     margin-right: 25px;
     padding-bottom: 10px;
     border-bottom: solid rgb(231, 231, 231) 1px;
+}
+
+.addons-sum-1-hidden {
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }
 
 .addons-sum-1 {
@@ -108,4 +141,35 @@
 .total h4 {
     color: #6259FF;
 }
+
+
+/* Footer */
+
+.summary-footer {
+    justify-content: space-between;
+    display: flex;
+    width:70%;
+    padding-bottom: 5%;
+}
+
+.summary-footer button {
+    background-color: #0c284c;
+    cursor: pointer;
+    color: white;
+    font-family: Ubuntu-r ;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+}
+
+/* .next-btn {
+    display: flex ;
+    justify-content: right;
+} */
+
+.summary-footer button:active {
+    background: #153f76;
+    color: white;
+  }
 

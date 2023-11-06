@@ -20,14 +20,26 @@
     font-family: Ubuntu-r;
 }
 
-.your-info form div {
+.your-info-1{
+    width:100%;
+    min-height: 400px;
+    margin-right: 10%;
+    flex-grow: 1;
+}
+
+.your-info-1 div {
    text-align: left;
 }
 
-.your-info form div h5 {
+.your-info-1 div h5 {
     color:#0e2f5a;
     font-size: smaller;
     margin-bottom: 10px;
+}
+
+.err-h5 {
+    color: red !important;
+   
 }
 
 .text-space {
@@ -35,10 +47,18 @@
     height: 45px;
     border-radius: 10px;
     border:solid 2px rgb(215, 215, 215);
-    margin-bottom: 40px;
+   
 }
 
-.text-space input {
+.text-space-error{
+    width: 70%;
+    height: 45px;
+    border-radius: 10px;
+    border:solid 2px red;
+}
+
+
+.text-space input, .text-space-error input {
     border: none;
     width: 90%;
     height: 90%;
@@ -46,11 +66,49 @@
     outline: none;
   }
 
-  .text-space input[type='text'] {
+  .text-space input[type='text'], .text-space-error input[type='text'] {
     font-family: Ubuntu-r;
   }
 
-  .text-space input::placeholder {
+  .text-space input::placeholder, .text-space-error input::placeholder {
     color: rgb(161, 158, 158);
     font-family: Ubuntu-r;
+  }
+
+.input-header {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    color: red;
+}
+
+/* Footer */
+
+
+.footer-info {
+    justify-content: right;
+    display: flex;
+    width:70%;
+    padding-bottom: 5%;
+}
+
+.footer-info button {
+    background-color: #0c284c;
+    cursor: pointer;
+    color: white;
+    font-family: Ubuntu-r ;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+}
+
+.next-btn {
+    display: flex ;
+    justify-content: right;
+}
+
+.footer-info button:active {
+    background: #153f76;
+    color: white;
   }

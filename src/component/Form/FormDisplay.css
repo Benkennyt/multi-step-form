@@ -14,14 +14,37 @@
 }
 
 
-/* .footer {
+.form {
+    min-width: 53%;
+    
+
+}
+
+.form-container {
+    width:100%;
+    min-height: 400px;
+    margin-right: 10%;
+    flex-grow: 1;
+}
+
+
+.header h1 {
+    font-family: Ubuntu-b;
+    width: 100%;
+    text-align: left;
+    color: #0e2f5a;
+}
+
+/* Footer  */
+
+.submit-footer {
     justify-content: space-between;
     display: flex;
     width:70%;
     padding-bottom: 5%;
 }
 
-.footer button {
+.submit-footer button {
     background-color: #0c284c;
     cursor: pointer;
     color: white;
@@ -32,12 +55,8 @@
     border-radius: 7px;
 }
 
-.next-btn {
-    display: flex ;
-    justify-content: right;
-}
 
-.footer button:active {
+.submit-footer button:active {
     background: #153f76;
     color: white;
-  } */
+  }

@@ -1,56 +1,46 @@
+
 import './AddOns.css';
+import MonthlyAddOns from './MonthlyAddOns';
+import YearlyAddOns from './YearlyAddOns';
 
-const AddOns = () => {
+const AddOns = ({val, setFieldValue, setPage, onchange}) => {
+
+
+  const moPlan = Object.values(val.monthlyPlan);
+  const moPlanSum = moPlan.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+  const moAddOns = Object.values(val.monthlyAddOns);
+  const moAddOnsSum = moAddOns.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+
+  
+
   return (
-    <div  className='addon'>
-      <p className='addon-p'>Add-ons help enhance your gaming experience</p>
-      <button className='option-btn'>
+    <div  className='addons'>
+      <div className='addons-2'>
+        {moPlanSum > 1 ? <MonthlyAddOns val={val} setFieldValue={setFieldValue}/>  : <YearlyAddOns val={val} setFieldValue={setFieldValue} onchange={onchange}/>}
+      </div>
 
-        <div className='input-div'>
-          <input type='checkbox'/>
-        </div>
+      <div className="addons-footer">
+        <button
+        type='button'
+        onClick={() => {
+            setPage((currPage) => currPage - 1);
+        }}
+        >
+        Go Back
+        </button>
 
-        <div className='details'>
-          <h5>Online service</h5>
-          <p>Access to multiplayer games</p>
-        </div>
-
-        <div className='price-div'>
-          <p className='price-p'>+$2/mo</p>
-        </div>
-      </button>
-
-      <button className='option-btn'>
-
-        <div className='input-div'>
-          <input type='checkbox'/>
-        </div>
-
-        <div className='details'>
-          <h5>Larger storage</h5>
-          <p>Extra 1TB of cloud save</p>
-        </div>
-
-        <div className='price-div'>
-          <p className='price-p'>+$2/mo</p>
-        </div>
-      </button>
-
-      <button className='option-btn'>
-        
-        <div className='input-div'>
-          <input type='checkbox'/>
-        </div>
-
-        <div className='details'>
-          <h5>Customizable profile</h5>
-          <p>Custom theme on your profile</p>
-        </div>
-
-        <div className='price-div'>
-          <p className='price-p'>+$2/mo</p>
-        </div>
-      </button>
+        <button
+        // disabled={yrAddOnsSum + moAddOnsSum === 0}
+        type='button'
+        onClick={() => {
+         setPage((currPage) => currPage + 1)
+         }}
+       >
+         Next Step
+       </button>
+  </div>
     </div>
   )
 }

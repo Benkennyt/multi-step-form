@@ -1,8 +1,12 @@
 import './Footer.css'
 
-const Footer = ({setPage, page}) => {
-    
+const Footer = ({setPage, page, errors}) => {
 
+  
+    
+  const Alert = () => {
+    alert('okay')
+  }
   return (
     <div className="footer">
         <button
@@ -13,14 +17,17 @@ const Footer = ({setPage, page}) => {
         >
         Go Back
         </button>
-        <button
-        disabled={page ==  3}
+
+        {page === 3 ? <button className='next-btn'
+          onClick={Alert} type='submit'
+        >Confirm</button> :  <button
+        // disabled={errors}
         onClick={() => {
-            setPage((currPage) => currPage + 1);
-        }}
-        >
-        Next Step
-        </button>
+         setPage((currPage) => currPage + 1)
+         }}
+       >
+         Next Step
+       </button>}
   </div>
   )
 }
