@@ -1,18 +1,18 @@
 import { useState } from "react";
 import "./App.css";
-import Footer from "./component/Footer/Footer";
 import FormDisplay from "./component/Form/FormDisplay";
-import Sidebar from "./component/Sidebar";
+import Sidebar from "./component/Sidebar/Sidebar";
 
 function App() {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState<number>(0);
 
   return (
     <div className="App">
-      <Sidebar />
-      <div className="form-footer">
-        <FormDisplay page={page} setPage={setPage} />
-      </div>
+        <div className="make-center">
+          <Sidebar page={page} />
+          <FormDisplay page={page} setPage={setPage} />
+        </div>
+      
     </div>
   );
 }

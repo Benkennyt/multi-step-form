@@ -6,19 +6,21 @@ import Summary from "../Summary/Summary";
 import './FormDisplay.css';
 import { useFormik  } from "formik";
 import { basicSchema } from "../../schemas";
-import Modal from "../Modal/Modal";
+import ThankYou from "../ThankYou/ThankYou";
 
 
 
 
+  const onSubmit = async ( actions : any) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    actions.resetForm();
+  };
 
-const onSubmit = async (values, actions) => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  actions.resetForm();
-};
-const FormDisplay = ({page, setPage}) => {
 
-  const {values, handleBlur, handleChange, errors, touched, handleSubmit, setFieldValue, dirty, isSubmitting} = useFormik ({
+const FormDisplay = (props: any) => {
+  const {page, setPage} = props
+
+  const {values, handleBlur, handleChange, errors, touched, handleSubmit, setFieldValue, dirty} = useFormik ({
       initialValues: {
       name: '',
       email: '',
@@ -45,14 +47,11 @@ const FormDisplay = ({page, setPage}) => {
       }
     },
     validationSchema: basicSchema,
+    validateOnChange:false,
     onSubmit,
-    // validateOnBlur: '',
-    // validateOnChange: '',
     
   });
-
   console.log(values)
-  
 
  
 
@@ -68,12 +67,12 @@ const FormDisplay = ({page, setPage}) => {
     if (page === 0) {
       return <YourInfo 
       val={values}
-      dirty={dirty}
       errors={errors}
       touched={touched}
       setPage={setPage} 
       page={page}
       onchange={handleChange}
+      handleBlur={handleBlur}
       />;
     } else if (page === 1) {
       return <SelectPlan
@@ -96,21 +95,23 @@ const FormDisplay = ({page, setPage}) => {
       val={values} 
       setPage={setPage} 
       page={page}
-      handleSubmit={handleSubmit}
-      isSubmitting={isSubmitting} />;
+    />;
+    } else if (page === 4) {
+      return <ThankYou/>
     }
   };
 
 
+
+
   return (
      <form className="form"  onSubmit={handleSubmit} autoComplete="off">
-      {isSubmitting ? <Modal/> :
-      <div className="form-container">
+      <div className={page === 1 ? "for-mobile" : "form-container"}>
         <div className="header">
           <h1>{FormTitles[page]}</h1>
         </div>
         <div className="form-body">{PageDisplay()}</div>
-      </div>}
+      </div>
     </form>
     
   );

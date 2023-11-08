@@ -1,18 +1,20 @@
 import './Summary.css';
 
 
-const Summary = ({val, setPage, page, isSubmitting}) => {
+const Summary = (props: any) => {
+
+  const {val, setPage} = props
   
-  const moPlan = Object.values(val.monthlyPlan);
+  const moPlan = Object.values<number>(val.monthlyPlan);
   const moPlanSum = moPlan.reduce((accumulator, currentValue) => accumulator + currentValue);
   
-  const yrPlan = Object.values(val.yearlyPlan);
+  const yrPlan = Object.values<number>(val.yearlyPlan);
   const yrPlanSum = yrPlan.reduce((accumulator, currentValue) => accumulator + currentValue);
 
-  const yrAddOns = Object.values(val.yearlyAddOns);
+  const yrAddOns = Object.values<number>(val.yearlyAddOns);
   const yrAddOnsSum = yrAddOns.reduce((accumulator, currentValue) => accumulator + currentValue);
 
-  const moAddOns = Object.values(val.monthlyAddOns);
+  const moAddOns = Object.values<number>(val.monthlyAddOns);
   const moAddOnsSum = moAddOns.reduce((accumulator, currentValue) => accumulator + currentValue);
 
   const total = moPlanSum + yrPlanSum + yrAddOnsSum + moAddOnsSum;
@@ -75,23 +77,27 @@ const Summary = ({val, setPage, page, isSubmitting}) => {
 
         <div className='total'>
           <p>Total (per {moPlanSum > 1 ? 'month' : 'year'})</p>
-          <h4>${total}/{moPlanSum > 1 ? 'mo' : 'yr'}</h4>
+          <h4>+${total}/{moPlanSum > 1 ? 'mo' : 'yr'}</h4>
         </div>
       </div>
 
+
+          {/*------------------------------ Foooter --------------------------------------*/}
+          
       <div className="summary-footer">
         <button
         type='button'
-        disabled={page == 0}
         onClick={() => {
-            setPage((currPage) => currPage - 1);
+            setPage((currPage:number) => currPage - 1);
         }}
         >
         Go Back
         </button>
 
         <button 
-        disabled={isSubmitting}
+          onClick={() => {
+            setPage((currPage: number) => currPage + 1)
+            }}
           type='submit'
         >Confirm</button>
       </div>

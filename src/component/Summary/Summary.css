@@ -24,13 +24,13 @@
 .summary-1 {
     background-color: rgb(248, 248, 248);
     border-radius: 10px;
-    width: 71.2%;
+    width: 100%;
     
 }
 
 .summary-2 {
     width:100%;
-    min-height: 400px;
+    min-height: 368px;
     margin-right: 10%;
     flex-grow: 1;
 }
@@ -55,11 +55,6 @@
     color: #0e2f5a;
 }
 
-.plan-sum-1 a {
-    color: rgb(161, 158, 158);
-    font-family:Ubuntu-r;
-    font-size: 10px;
-}
 
 .change {
     border: none;
@@ -128,7 +123,7 @@
     justify-content: space-between;
     margin-left: 25px;
     margin-right: 25px;
-    width: 63%;
+    width: 89%;
 }
 
 .total p {
@@ -143,12 +138,12 @@
 }
 
 
-/* Footer */
+          {/*------------------------------ Foooter --------------------------------------*/}
 
 .summary-footer {
     justify-content: space-between;
     display: flex;
-    width:70%;
+    width:100%;
     padding-bottom: 5%;
 }
 
@@ -163,13 +158,87 @@
     border-radius: 7px;
 }
 
-/* .next-btn {
-    display: flex ;
-    justify-content: right;
-} */
 
 .summary-footer button:active {
     background: #153f76;
     color: white;
   }
 
+  
+          {/*------------------------------ media queries --------------------------------------*/}
+
+  
+  @media (width <= 500px) {
+
+    .summary-2 {
+        margin-top: 40px;
+        border-radius: 15px;
+        height: 92.9dvb;
+       
+
+    }
+    .summary-p {
+        font-size: 30px;
+        max-width:500px ;
+        margin-bottom: 5px;
+    }
+
+    .plan-sum {
+        border-bottom: solid rgb(231, 231, 231) 2px;
+    }
+    
+    .plan-sum-1 {
+        text-align: left;
+    }
+    
+    .plan-sum-1 h5 {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    
+    
+    .change {
+        font-size: 28px;
+    }
+    
+    
+    .plan-sum-tt h5{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .addons-sum-1 p {
+        font-size: 28px;
+    }
+    
+    .addons-sum-1 h6 {
+      font-size: 25px;
+    }
+
+    .total {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25px;
+        margin-right: 25px;
+        width: 89%;
+    }
+    
+    .total p {
+        font-size: 30px;
+    }
+    
+    .total h4 {
+        margin-top: 25px;
+        font-size: 28px;
+    }
+
+
+
+          {/*------------------------------ Foooter --------------------------------------*/}
+
+.summary-footer button {
+    font-size: 25px;
+    height: 80px;
+    width: 200px;
+}
+  }

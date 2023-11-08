@@ -1,7 +1,8 @@
 import './Switch.css';
 import cx from 'classnames';
 
-const Switch = ({isToggled, onToggle}) => {
+const Switch = (props: any) => {
+  const {isToggled, onToggle} = props
     
     const moColorChange = cx('monthly',{
         'toggled': !isToggled

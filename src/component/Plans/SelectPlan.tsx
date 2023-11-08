@@ -4,15 +4,23 @@ import Switch from "./Switch";
 import { useState } from "react";
 import './SelectPlan.css';
 
+interface Props {
+  val: any, 
+  setFieldValue: any, 
+  setPage: any, 
+  page: number,
+  dirty: any
+}
+const SelectPlan = (props: Props) => {
 
-const SelectPlan = ({val, setFieldValue, setPage, page,dirty}) => {
+  const {val, setFieldValue, setPage, page,dirty} = props
   const [isToggled, setIsToggled] = useState(false)
   const [errorState, setErrorState] = useState(false)
 
-  const moPlan = Object.values(val.monthlyPlan);
+  const moPlan = Object.values<number>(val.monthlyPlan);
   const moPlanSum = moPlan.reduce((accumulator, currentValue) => accumulator + currentValue);
 
-  const yrPlan = Object.values(val.yearlyPlan);
+  const yrPlan = Object.values<number>(val.yearlyPlan);
   const yrPlanSum = yrPlan.reduce((accumulator, currentValue) => accumulator + currentValue);
 
   let planTotal = yrPlanSum + moPlanSum;
@@ -23,7 +31,7 @@ const SelectPlan = ({val, setFieldValue, setPage, page,dirty}) => {
     if (planTotal === 0) {
        setErrorState(true)
     } else  {
-      setPage((currPage) => currPage + 1)
+      setPage((currPage: number) => currPage + 1)
     }
   }
 
@@ -45,7 +53,7 @@ const SelectPlan = ({val, setFieldValue, setPage, page,dirty}) => {
           <button
           type='button'
           onClick={() => {
-              setPage((currPage) => currPage - 1);
+              setPage((currPage:number) => currPage - 1);
           }}
           >
           Go Back

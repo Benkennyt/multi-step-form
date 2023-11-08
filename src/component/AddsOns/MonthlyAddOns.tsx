@@ -1,6 +1,9 @@
 import './AddOns.css';
 
-const MonthlyAddOns = ({val, setFieldValue}) => {
+
+const MonthlyAddOns = (props:any) => {
+
+  const {val, setFieldValue} = props
 
   const MoOnlineService = () => {
     if (val.monthlyAddOns.onlineService === 0) {
@@ -35,9 +38,6 @@ const MonthlyAddOns = ({val, setFieldValue}) => {
     }
   }
 
-
-  // {moPlanSum > 1 ? +$1/mo :  +$1/Mo}
-  // MoPlanSum
 
   return (
     <div>

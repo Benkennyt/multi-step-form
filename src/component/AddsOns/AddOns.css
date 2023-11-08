@@ -14,12 +14,12 @@
 }
 
 .addons {
-    width: 70%;
+    width: 100%;
 }
 
 .addons-2 {
     
-    min-height: 434.5px;
+    min-height: 403px;
     flex-grow: 1;
 }
 
@@ -155,4 +155,80 @@
 .addons-footer button:active {
     background: #153f76;
     color: white;
+  }
+
+
+  /* media queries */
+
+  @media (width <= 500px) {
+
+    .addons-2 {
+    
+        height: 104.7dvb;
+    }
+    
+
+    .addons .addon-p {
+        font-size: 30px;
+        max-width:500px ;
+        margin-bottom: 40px;
+    }
+
+    .option-btn {
+        min-height: 130px;
+        border-radius: 15px;
+        margin-bottom: 5%;
+    }
+
+    .addon-selected {
+        min-height: 130px;
+        border-radius: 15px;
+        margin-bottom: 5%;
+    }
+
+    .input-div input[type='checkbox'] {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .input-div input[type='checkbox']:after {
+        zoom: 2;
+    }
+
+    .details {
+        margin-left: 20px;
+    }
+    .details h5 {
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+.details p {
+    margin-top: 7px;
+    font-size: 27px;
+}
+
+.price-div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-p {
+    color: #6259FF;
+    font-family: Ubuntu-r;
+    font-size: 27px;
+    
+}
+
+
+/* footer */
+
+.addons-footer button {
+    font-size: 25px;
+    height: 80px;
+    width: 200px;
+}
   }

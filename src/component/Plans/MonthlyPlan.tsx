@@ -2,7 +2,10 @@ import ArcadeIcon from './images/icon-arcade.svg';
 import AdvancedIcon from './images/icon-advanced.svg';
 import ProIcon from './images/icon-pro.svg'
 
-const MonthlyPlan = ({ val, setFieldValue, setErrorState}) => {
+
+const MonthlyPlan = (props:any) => {
+
+  const { val, setFieldValue, setErrorState} = props
 
   const ArcadeMon = () => {
     if (val.monthlyPlan.arcade === 0) {
@@ -49,20 +52,26 @@ const MonthlyPlan = ({ val, setFieldValue, setErrorState}) => {
     <div className="plan">
           <button className = {val.monthlyPlan.arcade === 9 ? 'selected' : 'btn'} type='button'  onClick={ArcadeMon}>
             <img src={ArcadeIcon} alt='arcade-icon' />
-            <h5>Arcade</h5>
-            <p className='p1'>$9/mo</p>
+            <div className='h5p'>
+              <h5>Arcade</h5>
+              <p className='p1'>$9/mo</p>
+            </div>
           </button>
 
-          <button className = {val.monthlyPlan.advanced === 12 ? 'selected' : 'btn'} type='button'  onClick={AdvancedMon}>
+          <button className = {val.monthlyPlan.advanced === 12 ? 'selected' : 'btn'} id='btn2' type='button'  onClick={AdvancedMon}>
             <img src={AdvancedIcon} alt='advanced-icon'/>
-            <h5>Advanced</h5>
-            <p className='p1'>$12/mo</p>
+            <div className='h5p'>
+              <h5>Advanced</h5>
+              <p className='p1'>$12/mo</p>
+            </div>
           </button>
 
           <button className = {val.monthlyPlan.pro === 15 ? 'selected' : 'btn'} type='button'  onClick={ProMon}>
             <img src={ProIcon} alt='pro-icon'/>
-            <h5>Pro</h5>
-            <p className='p1'>$15/mo</p>
+            <div className='h5p'>
+              <h5>Pro</h5>
+              <p className='p1'>$15/mo</p>
+            </div>
           </button>
     </div>
   )

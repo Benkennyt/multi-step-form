@@ -1,23 +1,19 @@
 import { useState } from 'react';
 import './YourInfo.css';
 
-const YourInfo = ({val, onblur, onchange, errors, touched,setPage, page}) => {
-  const [manualValidation, setManualValidation] = useState(false)
+const YourInfo = (props: any) => {
+  const {val, handleBlur, onchange, errors, setPage, touched} = props;
+  const [emptyInput, setEmptyInput] = useState(false);
 
-  console.log()
-  const Validate = () => {
-   
-    setPage((currPage) => currPage + 1)
-    // if (val.name && val.phone && val.email ) {
-    //   setManualValidation(false)
-    // } else {
-    //   setManualValidation(true)
-      
-    // }
-
-    console.log(manualValidation)
-  }
-
+  const ValidateForm = () => {
+    if ( val.name === '' || val.phone === '' || val.email === '') {
+      return setEmptyInput(true)
+    } else if (errors.name || errors.phone || errors.email ) {
+      return (errors)
+    } else {
+      setPage((currPage: number) => currPage + 1)
+    }
+  };
 
 
   return (
@@ -28,66 +24,68 @@ const YourInfo = ({val, onblur, onchange, errors, touched,setPage, page}) => {
         <div>
           <div className='input-header'>
             <h5>Name</h5>
-            <h5 className='err-h5'>{!manualValidation  ? errors.name : ''}</h5>
+            <h5 className='err-h5'>{ errors.name && touched.name ? errors.name : '' }</h5>
           </div>
-          <div className={errors.name && !manualValidation ? 'text-space-error' : 'text-space'}>
+          <div className={errors.name && touched.name ? 'text-space-error' : 'text-space'}>
             <input
               type='text'
               placeholder='e.g Stephen King'
               id='name'
               value={val.name}
               onChange={onchange}
-              onBlur={onblur}
+              onBlur={handleBlur}
+             
             />
           </div>
         </div>
         <div>
         <div className='input-header'>
             <h5>Email Address</h5>
-            <h5 className='err-h5'>{!manualValidation ? errors.email : ''}</h5>
+            <h5 className='err-h5'>{errors.email && touched.email ? errors.email : ''}</h5>
           </div>
-          <div className={errors.email && !manualValidation ? 'text-space-error' : 'text-space'}>
+          <div className={errors.email && touched.email  ? 'text-space-error' : 'text-space'}>
            <input 
             type="email" 
             placeholder='e.g stephenking@lorem.com'
             id='email'
             value={val.email}
             onChange={onchange}
-            onBlur={onblur}
+            onBlur={handleBlur}
           />
           </div>
         </div>
         <div>
         <div className='input-header'>
             <h5>Phone Number</h5>
-            <h5 className='err-h5'>{!manualValidation ? errors.phone : ''}</h5>
+            <h5 className='err-h5'>{errors.phone && touched.phone ? errors.phone : ''}</h5>
           </div>
-          <div className={errors.phone && !manualValidation ? 'text-space-error' : 'text-space'}>
+          <div className={errors.phone && touched.phone ? 'text-space-error' : 'text-space'}>
             <input 
               type="text" 
               placeholder='e.g +1 234 567 890'
               id='phone'
               value={val.phone}
               onChange={onchange} 
-              onBlur={onblur} 
+              onBlur={handleBlur} 
             />
           </div>
+
+          <h5 className='err-h5'>{emptyInput ? 'Kindly provide all requested details.' : '' }</h5>
         </div>
 
+          {/*------------------------------ Foooter --------------------------------------*/}
 
         </div>
-          {/* Foooter */}
           <div className="footer-info">
             <button
             type='button'
-            // disabled={manualValidation}
-            onClick={Validate}
+            onClick={ValidateForm}
           >
             Next Step
           </button>
         </div>
     </div>
-  )
-}
+  );
+};
 
 export default YourInfo

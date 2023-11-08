@@ -3,17 +3,12 @@ import './AddOns.css';
 import MonthlyAddOns from './MonthlyAddOns';
 import YearlyAddOns from './YearlyAddOns';
 
-const AddOns = ({val, setFieldValue, setPage, onchange}) => {
+const AddOns = (props:any) => {
+  const {val, setFieldValue, setPage, onchange} = props
 
 
-  const moPlan = Object.values(val.monthlyPlan);
-  const moPlanSum = moPlan.reduce((accumulator, currentValue) => accumulator + currentValue);
-
-  const moAddOns = Object.values(val.monthlyAddOns);
-  const moAddOnsSum = moAddOns.reduce((accumulator, currentValue) => accumulator + currentValue);
-
-
-  
+  const moPlan = Object.values<number>(val.monthlyPlan);
+  const moPlanSum : any = moPlan.reduce((accumulator, currentValue) => accumulator + currentValue);
 
   return (
     <div  className='addons'>
@@ -25,17 +20,16 @@ const AddOns = ({val, setFieldValue, setPage, onchange}) => {
         <button
         type='button'
         onClick={() => {
-            setPage((currPage) => currPage - 1);
+            setPage((currPage: number ) => currPage - 1);
         }}
         >
         Go Back
         </button>
 
         <button
-        // disabled={yrAddOnsSum + moAddOnsSum === 0}
         type='button'
         onClick={() => {
-         setPage((currPage) => currPage + 1)
+         setPage((currPage: number) => currPage + 1)
          }}
        >
          Next Step

@@ -13,7 +13,6 @@
     src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
 }
 
-
 .your-info p {
     color: rgb(161, 158, 158);
     text-align: left;
@@ -22,7 +21,7 @@
 
 .your-info-1{
     width:100%;
-    min-height: 400px;
+    min-height: 368px;
     margin-right: 10%;
     flex-grow: 1;
 }
@@ -43,7 +42,7 @@
 }
 
 .text-space {
-    width: 70%;
+    width: 100%;
     height: 45px;
     border-radius: 10px;
     border:solid 2px rgb(215, 215, 215);
@@ -51,7 +50,7 @@
 }
 
 .text-space-error{
-    width: 70%;
+    width: 100%;
     height: 45px;
     border-radius: 10px;
     border:solid 2px red;
@@ -78,17 +77,16 @@
 .input-header {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 100%;
     color: red;
 }
 
-/* Footer */
-
+{/*------------------------------ Foooter --------------------------------------*/}
 
 .footer-info {
     justify-content: right;
     display: flex;
-    width:70%;
+    width:100%;
     padding-bottom: 5%;
 }
 
@@ -112,3 +110,63 @@
     background: #153f76;
     color: white;
   }
+
+
+ {/*------------------------------ media queries --------------------------------------*/}
+
+
+
+
+
+  @media (width <= 500px) {
+    .your-info {
+        background-color: transparent;
+    }
+
+    .your-info-1{
+        height: 96.7dvb;
+    }
+
+    .your-info p {
+        font-size: 30px;
+        max-width:500px ;
+        margin-bottom: 5px;
+    }
+
+    .your-info-1 div h5 {
+        font-size: 25px;
+    }
+    
+    
+    .text-space {
+        height: 80px;
+        border-radius: 15px;
+    }
+    
+    .text-space-error{
+        height: 80px;
+        border-radius: 15px;
+    }
+    
+    
+    .text-space input[type='text'], .text-space-error input[type='text'], .text-space input[type='email'], .text-space-error input[type='email']{
+    font-family: Ubuntu-r;
+    font-size: 30px;
+    }
+
+    .text-space input::placeholder, .text-space-error input::placeholder {
+    color: rgb(161, 158, 158);
+    font-family: Ubuntu-r;
+    font-size: 30px;
+    }
+
+    
+{/*------------------------------ Foooter --------------------------------------*/}
+
+
+.footer-info button {
+    font-size: 25px;
+    height: 80px;
+    width: 200px;
+}
+}

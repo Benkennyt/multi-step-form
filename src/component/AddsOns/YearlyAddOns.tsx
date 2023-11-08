@@ -1,14 +1,9 @@
-import { moPlanSum, yrPlanSum } from '../Summary/Summary';
 import './AddOns.css';
 
-const YearlyAddOns = ({val, setFieldValue}) => {
+const YearlyAddOns = (props: any) => {
 
-  // const yrAddOns = Object.values(val.monthlyAddOns);
-  // const yrAddOnsSum = yrAddOns.reduce((accumulator, currentValue) => accumulator + currentValue);
+  const {val, setFieldValue} = props;
 
-  // // console.log(yrAddOnsSum + moAddOnsSum)
-  // console.log(yrAddOns)
-  // console.log(val.monthlyAddOns)
   const YrOnlineService = () => {
     if (val.yearlyAddOns.onlineService === 0) {
       setFieldValue('yearlyAddOns.onlineService', 10)
@@ -41,10 +36,6 @@ const YearlyAddOns = ({val, setFieldValue}) => {
       setFieldValue('yearlyAddOns.customProfile', 0)
     }
   }
-
-
-  // {moPlanSum > 1 ? +$1/mo :  +$10/yr}
-  // yrPlanSum
 
   return (
     <div>

@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Ubuntu-b;
+    src: url(/src/assets/fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family:Ubuntu-m;
+    src: url(/src/assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu-r;
+    src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
+}
+
+.modal {
+    width:100%;
+    height: 500px;
+
+}
+
+.modal-1 {
+
+    width: 100%;
+    align-items: center;
+}
+
+.modal-1 h1 {
+    color: #0e2f5a;
+    font-family: Ubuntu-b;
+    text-align: center;
+}
+
+.modal-1 p {
+    font-family: Ubuntu-r;
+    color: rgb(161, 158, 158);
+    max-width: 450px;
+}
+
+@media (width <= 500px) {
+
+    .modal {
+        margin-top: 130px;
+    
+    }
+
+    .modal-1 h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .modal-1 p {
+        margin-top: 10px;
+        max-width: 100%;
+        font-size: 32px;
+    }
+}
