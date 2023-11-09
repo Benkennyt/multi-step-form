@@ -47,7 +47,6 @@ const FormDisplay = (props: any) => {
       }
     },
     validationSchema: basicSchema,
-    validateOnChange:false,
     onSubmit,
     
   });
