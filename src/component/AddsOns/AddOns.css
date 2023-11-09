@@ -161,11 +161,6 @@
   /* media queries */
 
   @media (width <= 500px) {
-
-    .addons-2 {
-    
-        height: 104.7dvb;
-    }
     
 
     .addons .addon-p {
@@ -227,6 +222,7 @@
 /* footer */
 
 .addons-footer button {
+    margin-top: 432px;
     font-size: 25px;
     height: 80px;
     width: 200px;

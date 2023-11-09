@@ -152,11 +152,6 @@
         margin-bottom: 30px;
     }
 
-    .select-plan-1 {
-        height: 94.5dvb;
-
-    }
-
     .btn {
         width:100% ;
         max-height: 180px;
@@ -214,6 +209,7 @@
 
 
 .plan-footer button {
+    margin-top: 244px;
     font-size: 25px;
     height: 80px;
     width: 200px;
