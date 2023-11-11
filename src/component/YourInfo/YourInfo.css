@@ -13,6 +13,9 @@
     src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
 }
 
+
+
+
 .your-info p {
     color: rgb(161, 158, 158);
     text-align: left;
@@ -101,11 +104,6 @@
     border-radius: 7px;
 }
 
-.next-btn {
-    display: flex ;
-    justify-content: right;
-}
-
 .footer-info button:active {
     background: #153f76;
     color: white;
@@ -116,55 +114,118 @@
 
 
 
-
-
-  @media (width <= 500px) {
+@media (width <= 500px) {
     .your-info {
         background-color: transparent;
     }
 
-
     .your-info p {
-        font-size: 30px;
-        max-width:500px ;
-        margin-bottom: 5px;
+        width: 80%;
+        margin-bottom: 0;
+        font-size: 20px;
     }
+
+    .err-h5 {
+        margin-bottom: 20px !important;
+    }
+
+    .your-info-1{
+        min-height: unset;
+    }
+
 
     .your-info-1 div h5 {
-        font-size: 25px;
+        font-size: 15px;
     }
-    
-    
+
+    .input-header {
+        width: 93%;
+    }
+
+    .input-header h5 {
+        margin-top: 20px;
+        
+    }
+
     .text-space {
-        height: 80px;
-        border-radius: 15px;
+        width: 93%;
+        border-radius: 5px;
     }
     
     .text-space-error{
-        height: 80px;
-        border-radius: 15px;
+        width: 93%;
+        border-radius: 5px;
     }
-    
-    
+
     .text-space input[type='text'], .text-space-error input[type='text'], .text-space input[type='email'], .text-space-error input[type='email']{
-    font-family: Ubuntu-r;
-    font-size: 30px;
+        font-size: 17px;
+    }
+    
+    .text-space input::placeholder, .text-space-error input::placeholder {
+        font-size: 17px;
+        font-family: Ubuntu-m;
+    } 
+
+    /* footer................. */
+
+    .footer-info {
+        position: fixed;
+        bottom: 0;
+        right: 10px;
+        width:100%;
+        margin-right: -10px;
+        padding-right: 11px;
+        background-color: white;
+        padding-top: 15px;
     }
 
-    .text-space input::placeholder, .text-space-error input::placeholder {
-    color: rgb(161, 158, 158);
-    font-family: Ubuntu-r;
-    font-size: 30px;
+
+    .footer-info button {
+        height: 50px;
+        width: 120px;
+        font-size: 17px;
+        border-radius: 5px;
     }
 
     
-/*------------------------------ Foooter --------------------------------------*/
+}
+
+@media (width <= 390px) {
+   .your-info p {
+     width: 70%;
+     margin-top: 10px;
+     font-size: unset;
+   }
 
 
-.footer-info button {
-    margin-top: 400px;
-    font-size: 25px;
-    height: 80px;
-    width: 200px;
+   .your-info-1 div h5 {
+    font-size: 11px;
+    margin-bottom: 3px;
+   }
+
+   
+   .input-header h5 {
+    margin-top: 13px;
+    
 }
+
+   .text-space input[type='text'], .text-space-error input[type='text'], .text-space input[type='email'], .text-space-error input[type='email']{
+    font-size: unset;
+   }
+
+   .text-space input::placeholder, .text-space-error input::placeholder {
+    font-size: unset;
+   } 
+
+   /* footer.................... */
+
+
+   .footer-info button {
+    font-size: 0.834em;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
 }
+
+}
+

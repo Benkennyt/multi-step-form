@@ -105,7 +105,7 @@ const FormDisplay = (props: any) => {
 
   return (
      <form className="form"  onSubmit={handleSubmit} autoComplete="off">
-      <div className={page === 1 ? "for-mobile" : "form-container"}>
+      <div className="form-container">
         <div className="header">
           <h1>{FormTitles[page]}</h1>
         </div>

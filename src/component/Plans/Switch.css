@@ -101,7 +101,8 @@ input:checked + .slider:before {
 
 /* media queiries */
 
-@media (width <= 500px) {
+/* @media (width <= 500px) {
+
     .switch-d {
         width:100% ;
         height: 100px;
@@ -171,4 +172,68 @@ input:checked + .slider:before {
         font-size: 30px;
         margin-top: 30px;
     }
+} */
+
+
+@media (width <= 500px) {
+    .switch-d {
+        width:93% ;
+    }
+
+    .monthly {
+        font-size: 17px;
+        margin-top: 13px;
+    }
+    
+    .yearly {
+        font-size: 17px;
+        margin-top: 13px;
+    }
+    
+    .monthly.toggled {
+        font-size: 17px;
+        margin-top: 13px;
+    }
+    
+    .yearly.toggled {
+       font-size: 17px;
+       margin-top: 13px;
+    }
+
+}
+
+
+@media (width <= 390px) {
+    .switch-d-1 {
+        width: 100%;
+        margin-left: -20px;
+        padding-left: 20px;
+        background-color: white;
+        padding-bottom: 20px;
+        border-radius: 15px;
+    }
+    .switch-d {
+        width:93% ;
+    }
+
+    .monthly {
+        font-size: 17px;
+        margin-top: 13px;
+    }
+    
+    .yearly {
+        font-size: 17px;
+        margin-top: 13px;
+    }
+    
+    .monthly.toggled {
+        font-size: 17px;
+        margin-top: 13px;
+    }
+    
+    .yearly.toggled {
+       font-size: 17px;
+       margin-top: 13px;
+    }
+
 }

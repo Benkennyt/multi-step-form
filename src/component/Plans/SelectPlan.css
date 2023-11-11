@@ -144,74 +144,151 @@
 
 
 
+
 @media (width <= 500px) {
     .select-plan p {
-        font-size: 30px;
-        max-width:500px ;
-        margin-top: 25px;
+        width: 80%;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .plan {
+        display: block;
+        text-align: left;
         margin-bottom: 30px;
     }
 
+    .plan-err{
+        width: 100% !important;
+        height: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+    
     .btn {
-        width:100% ;
-        max-height: 180px;
-        min-height: 150px;
+        width:95% ;
+        text-align: left;
+        border-radius: 10px;
+        cursor: pointer;
         display: flex;
-        border-radius: 15px;
+        justify-self: center;
+    }
+
+    .btn img , .selected img{
+        width: 15%;
+    }
+
+    .selected {
+        width:93% ;
+        text-align: left;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-self: center;
     }
     
     #btn2 {
-        margin: 4% 0 4% 0;
-    }
-    
-    .selected {
-        width:100% ;
-        height: 150px;
-        display: flex;
-    }
-
-    .btn img,.selected img {
-        width: 90px;
-        margin-top: 27px;
-        
-    }
-    
-    .btn h5,.selected h5 {
-        margin-top: 30px;
-        font-size: 35px;
-        margin-bottom: 0;
+        margin: 3.3% 0 3.3% 0;
     }
     
     .h5p {
-        margin-left: 30px;
+        margin-left: 20px;
+        margin-top: 12px;
+        margin-bottom: 10px;
+    }
+    .h5p h5 {
+        margin-top: 0;
+        font-size: 20px;
     }
     .h5p .p1, .selected .h5p .p1 {
-        font-size: 25px ;
-        margin-top: 7px;
-        margin-bottom: 10px !important;
+            font-size: 20px;
+            font-family: Ubuntu-r;
+            color: rgb(172, 170, 170);
+            margin-bottom: 0;
     }
-    
+
     .h5p .p2 {
-        font-size: 25px;
-        margin-bottom: 15px !important;
-        margin-top: 0;
+        font-size: 15px;
+        margin-top: 3px;
+        width: 100%;
     }
-    
-    .plan-err{
-        color: red !important;
-        text-align: right;
-        display: flex;
-        justify-content: right;
-        min-width: 100%;
-    }
-    
-/* Footer */
 
 
-.plan-footer button {
-    margin-top: 244px;
-    font-size: 25px;
-    height: 80px;
-    width: 200px;
+    /* footer.............................. */
+
+
+    .plan-footer {
+        position: fixed;
+        bottom: 0;
+        right: 1px;
+        width:95%;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: white;
+        padding-top: 15px;
+        
+    }
+    
+    .plan-footer button {
+        height: 50px;
+        width: 120px;
+        font-size: 17px;
+        border-radius: 5px;
+    }
 }
+
+
+
+
+
+@media (width <= 390px) {
+    .select-plan p {
+        width: 74%;
+        margin-top: 10px;
+        font-size: unset;
+    }
+
+    .btn img , .selected img{
+        width: 13%;
+    }
+
+    .btn img , .selected img{
+        width: 13%;
+        margin-bottom: 5px;
+        margin-top: 12px;
+    }
+
+    .h5p {
+        margin-left: 20px;
+        margin-top: 12px;
+    }
+    .h5p h5 {
+        margin-top: 0;
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+    .h5p .p1, .selected .h5p .p1 {
+            font-size: 13px;
+            font-family: Ubuntu-r;
+            color: rgb(172, 170, 170);
+            margin-bottom: 5px !important;
+            margin-top:4px;
+    }
+
+    .h5p .p2 {
+        font-size: 10px;
+        margin-top: 0px;
+        margin-bottom: 5px !important;
+        width: 100%;
+    }
+    
+    /* footer......................... */
+
+
+    .plan-footer button {
+        font-size: 0.834em;
+        height: 40px;
+        width: 100px;
+        border-radius: 7px;
+    }
 }

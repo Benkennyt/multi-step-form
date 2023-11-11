@@ -95,26 +95,28 @@
 }
 
 .addons-sum-1-hidden {
-    visibility: hidden;
-    width: 0;
+    display: none;
     height: 0;
+    
 }
 
 .addons-sum-1 {
     font-family: Ubuntu-r;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .addons-sum-1 p {
     color:rgb(161, 158, 158);
     font-size: smaller;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .addons-sum-1 h6 {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     color: #1f5cac;
 }
 
@@ -138,7 +140,7 @@
 }
 
 
-          /*------------------------------ Foooter --------------------------------------*/
+ /*------------------------------ Foooter --------------------------------------*/
 
 .summary-footer {
     justify-content: space-between;
@@ -165,80 +167,133 @@
   }
 
   
-          /*------------------------------ media queries --------------------------------------*/
+ /*------------------------------ media queries --------------------------------------*/
 
-  
+
   @media (width <= 500px) {
-
-    .summary-2 {
-        margin-top: 40px;
-        border-radius: 15px;
-       
-
-    }
     .summary-p {
-        font-size: 30px;
-        max-width:500px ;
-        margin-bottom: 5px;
+        width: 85%;
+        margin-bottom: 30px;
+        font-size: 20px;
     }
 
+    .summary-1 {
+        width: 95%;
+    }
+    
     .plan-sum {
-        border-bottom: solid rgb(231, 231, 231) 2px;
+        border-bottom: solid rgb(206, 205, 205) 1px;
     }
-    
-    .plan-sum-1 {
-        text-align: left;
-    }
-    
+
     .plan-sum-1 h5 {
-        font-size: 30px;
-        margin-top: 30px;
+       font-size: 20px;
     }
     
     
     .change {
-        font-size: 28px;
-    }
-    
-    
-    .plan-sum-tt h5{
-        font-size: 30px;
-        margin-top: 20px;
+    font-size: 17px;
     }
 
+    .plan-sum-tt h5{
+        font-size: 17px;
+    }
+    
+    
     .addons-sum-1 p {
-        font-size: 28px;
+        font-size: 17px;
     }
     
     .addons-sum-1 h6 {
-      font-size: 25px;
+        font-size: 16px;
     }
-
+    
     .total {
-        display: flex;
-        justify-content: space-between;
-        margin-left: 25px;
-        margin-right: 25px;
-        width: 89%;
+        width: 81%;
     }
     
     .total p {
-        font-size: 30px;
+        font-size: 20px;
+        
     }
     
     .total h4 {
-        margin-top: 25px;
-        font-size: 28px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    
+     /*------------------------------ Foooter --------------------------------------*/
+    
+    .summary-footer {
+        position: fixed;
+        bottom: 0;
+        right: 1px;
+        width:95%;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: white;
+        padding-top: 15px;
+    }
+    
+    .summary-footer button {
+        height: 50px;
+        width: 120px;
+        font-size: 17px;
+        border-radius: 5px;
+    }
+    
+  }
+
+
+  @media (width <= 390px) {
+    .summary-p {
+        font-size: 17px;
+    }
+    
+    .plan-sum-1 h5 {
+       font-size: 15px;
+    }
+    
+    
+    .change {
+    font-size: 14px;
     }
 
-
-
-          /*------------------------------ Foooter --------------------------------------*/
-
-.summary-footer button {
-    margin-top: 483px;
-    font-size: 25px;
-    height: 80px;
-    width: 200px;
-}
+    .plan-sum-tt h5{
+        font-size: 14px;
+    }
+    
+    
+    .addons-sum-1 p {
+        font-size: 14px;
+    }
+    
+    .addons-sum-1 h6 {
+        font-size: 13px;
+    }
+    
+    .total {
+        width: 81%;
+    }
+    
+    .total p {
+        font-size: 16px;
+        
+    }
+    
+    .total h4 {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    
+     /*------------------------------ Foooter --------------------------------------*/
+    
+    .summary-footer button {
+        font-size: 0.834em;
+        height: 40px;
+        width: 100px;
+        border-radius: 7px;
+    }
+    
   }
